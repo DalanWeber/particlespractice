@@ -79,10 +79,10 @@ function handleParticles() {
                 ctx.stroke();
             }
         }
-        // if (particlesArray[i].size <= 0.3) {
-        //     particlesArray.splice(i, 1);
-        //     i--;
-        // }
+        if (particlesArray[i].size <= 0.3) {
+            particlesArray.splice(i, 1);
+            i--;
+        }
     }
 }
 
@@ -103,12 +103,7 @@ function animate() {
     ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     handleParticles();
-    //   if(hue = 360){
-    //       hue = 0
-    //   }
-    //   else {
     hue += 5;
-    //   }
     requestAnimationFrame(animate);
 }
 animate();
