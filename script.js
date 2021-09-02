@@ -79,7 +79,7 @@ function handleParticles() {
                 ctx.stroke();
             }
         }
-        if (particlesArray[i].size <= 0.3) {
+        if (particlesArray[i].size <= 0.9) {
             particlesArray.splice(i, 1);
             i--;
         }
